@@ -14,7 +14,9 @@ public class JdbcUtil {
 		try (InputStream is = Thread.currentThread()
 				.getContextClassLoader()
 				.getResourceAsStream(proptiesPath)) {
+			
 			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
 			Properties props = new Properties();
 			props.load(is);
 			
